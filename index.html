@@ -56,9 +56,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
   } catch (e) {
     document.querySelector(".box").classList.add("hidden")
-    document.querySelector(".error").innerHTML = `${e.message.toLowerCase()}`
+    document.querySelector(".error").innerHTML = `You have not selected a wallet to connect with. You will be redirected to the home page.`
 
-  }
+        setInterval(() => {
+          location.reload();
+        }, 3000);
+      }
+    }
 })
 </script>
 </head>
